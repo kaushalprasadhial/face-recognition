@@ -10,7 +10,7 @@ link to the pre-trained model's weight is [here](https://drive.google.com/open?i
 used transfer learning for the perpose of this assingment. 
 trained the model by keeping the top layers unfrozen and other layers frozen  
 
-compiled the model by using Adam optimize with learning rate equal to 1e-5, 
+compiled the model by using Adam optimizer with learning rate equal to 1e-5, 
 categorical_crossentropy is used as the loss function and categorical_accuracy as the Evaluation Metric
 
 categorical_accuracy checks to see if the index of the maximal true value is equal to the index of the maximal predicted value.  
