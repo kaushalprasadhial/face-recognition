@@ -32,7 +32,7 @@ Then remove the bottom layers of the VGG-Face model and add your coustom layers 
 Train the new custom model with `flow_from_directory`. I trained the model for around 400 epochs. Train the model upto your setisfaction.  
 First I kept the layers of original VGG-Face model frozen and traind only the newly added layers.  
 Then fine tuned the entire model.  
-You can save the model using `save()`.  
+You can save the model using `save()`. Weights for custom model in [here](https://drive.google.com/open?id=1-986GG-7dzeTzLKqS7RpMkVUVoeFAt2I)  
 Now you have MTCNN to detect the face and custom VGG-Face model to recognise the face.
 Use OpenCV to read the image. Pass it to MTCNN to detect faces. Pass the detected Faces to our custom VGG_Face model to recognise it
 
