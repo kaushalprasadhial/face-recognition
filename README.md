@@ -18,7 +18,25 @@ Categorical crossentropy is a loss function that is used for single label catego
 Use categorical crossentropy in classification problems where only one result can be correct.
 
 ## Note
-The block before the Target block must use the activation function Softmax.
 
-this model is trained on Google Colabrotory with GPU enabled runtime
-after traning for arround   epochs I got the categorical_accuracy as 
+This model is trained on Google Colabrotory with GPU enabled runtime.
+after traning for arround 400 epochs I got the categorical_accuracy as 70-75%.
+I have used Google Colabrotory just to train the custom VGG-Face model. and later downloaded that model to my local drive in order to recognise face from webcam.
+
+# How to use
+
+First install MTCNN. [MTCNN](https://arxiv.org/abs/1604.02878) is a deep learning arcitecture for facial detection.  
+I have used `ImageDataGenerator` for traning the model. For traning I had to make a special directory scructure in order to use `ImageDataGenerator`. First there are two directy test and train, and each of the contain 6 sub directories, one for each class of our traning and sample. all the sub directories are named as there respective class ('Scarlett Johansson', 'Willa Holland', 'alexandra daddario', 'amber heard face', 'anne hathaway', 'kaushal'). Each sub directory contains only the face of the respective persons.  
+Load the pretrainde VGG-Face model from [here](https://drive.google.com/open?id=1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo). Pretrained model is in .h5 format. Load the model using `load_model()`   
+Then remove the bottom layers of the VGG-Face model and add your coustom layers accourding to your need. I have added a dence layer, a dropout layer and a softmax layer   
+Train the new custom model with `flow_from_directory`. I trained the model for around 400 epochs. Train the model upto your setisfaction.  
+You can save the model using `save()`.  
+Now you have MTCNN to detect the face and custom VGG-Face model to recognise the face.
+Use OpenCV to read the image. Pass it to MTCNN to detect faces. Pass the detected Faces to our custom VGG_Face model to recognise it
+
+
+
+
+
+
+
