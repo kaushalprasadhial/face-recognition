@@ -1,6 +1,6 @@
 # face-recognition
 
-Face recognition program capable of recognising my face as well as 5 other celebrities face. it's a deep learnig based program which uses MTCNN for face detection and modified VGG-Face model for face recognition, which is trained on custom dataset. I have used VGG-Face model as my base model.  
+Face recognition program, capable of recognizing my face as well as 5 other celebrities face. it's a deep learning based program which uses MTCNN for face detection and modified VGG-Face model for face recognition, which is trained on custom data set. I have used VGG-Face model as my base model.  
 The structure of the VGG-Face model is demonstrated below.
 ![VGG-Face model](images/vgg-face-model.png)
 Research paper denotes the layer structre as shown below.
